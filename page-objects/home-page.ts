@@ -91,11 +91,14 @@ export class HomePage extends BasePage {
     await this.calendarStartDate.click();
     await this.calendarEndDate.click(); 
     await this.datePickerSaveButton.click();
-
-    //click the date picker
-    //click first date
-    //click second date
-    //verify first date in input
-    // verify second date in input
   }
+
+
+  async selectTravelTrip(desiredDestination, language) {
+
+    await this.selectTravelDate();
+    await this.selectDestination(desiredDestination, language);
+    await this.submitSearchButton.click();
+}
+
 }

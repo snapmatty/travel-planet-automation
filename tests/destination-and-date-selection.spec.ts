@@ -1,10 +1,5 @@
-import {
-  desiredDestination,
-  travelEndDate,
-  travelStartDate,
-} from "../helpers/test.data";
+import { desiredDestination } from "../helpers/test.data";
 import { test, expect } from "../helpers/fixtures";
-import { faker } from "@faker-js/faker";
 
 test.beforeEach(async ({ homePage }) => {
   await homePage.goto();

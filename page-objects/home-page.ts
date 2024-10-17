@@ -64,16 +64,10 @@ export class HomePage extends BasePage {
         hu: "Varsova",
         cz: "Warszawa",
       },
-      Bratislava: {
-        pl: "Bratysława",
-        sk: "Bratislava",
-        hu: "Bratislava",
-        cz: "Bratislava",
-      },
       Egypt: {
         pl: "Egipt",
         sk: "Egypt",
-        hu: "Egypt",
+        hu: "Egyiptom",
         cz: "Egypt",
       },
     };

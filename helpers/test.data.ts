@@ -10,6 +10,9 @@ const newUser = {
   password: password,
 };
 
-const baseURL = "https://www.travel-planet.pl";
+const desiredDestination = "Egypt";
 
-export { newUser, baseURL };
+const travelStartDate = "04-11-2024";
+const travelEndDate = "24-11-2024";
+
+export { newUser, desiredDestination, travelStartDate, travelEndDate };

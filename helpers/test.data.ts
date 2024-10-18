@@ -8,6 +8,7 @@ const password = generatePassword();
 const newUser = {
   email: faker.internet.email(),
   password: password,
+  phoneNumber: faker.phone.number({style: "national"}),
 };
 
 const desiredDestination = "Egypt";

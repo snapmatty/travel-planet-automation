@@ -2,26 +2,17 @@ import { Page, Locator } from "@playwright/test";
 import { BasePage } from "./base-page";
 
 export class ResultsPage extends BasePage {
-  readonly destinationPicker: Locator;
-  readonly secondPageButton: Locator;
+  readonly submitButton: Locator;
+  readonly consentCheckbox: Locator;
+  readonly emailInput: Locator;
+  readonly phoneNumberInput: Locator;
 
   constructor(page: Page) {
     super(page);
 
-    this.destinationPicker = page.locator("[data-cy='sf-destination-picker-textbox']");
+    this.submitButton = page.locator('button[type="submit"].btn--main');
+    this.consentCheckbox = page.locator('input[type="checkbox"][name="order-form-gdpr-consent"]');
+    this.emailInput = page.locator('input[type="email"][name="order-user-email"]');
+    this.phoneNumberInput = page.locator('input[type="tel"]');
   }
-  paginationButton(pageNumber: number) {
-    return this.page.locator(`button.pagination__link:has-text("${pageNumber}")`);
-  }
-
-  async clickPaginationButton(pageNumber: number) {
-    
-    const paginationButton = this.paginationButton(pageNumber);
-    await paginationButton.waitFor({state:'visible'});
-    await paginationButton.click();
 }
-}
-
-
-
-

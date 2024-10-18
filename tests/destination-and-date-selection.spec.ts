@@ -10,7 +10,7 @@ test.beforeEach(async ({ homePage }) => {
 test.describe("Destination and date selection", () => {
   test("should allow user to serach selected destination and date", async ({
     homePage,
-    resultsPage,
+    offerSelectionPage,
   }) => {
     await test.step("when the user selects destination", async () => {
       const projectName = (await test.info()).project.name;
@@ -30,7 +30,7 @@ test.describe("Destination and date selection", () => {
       await homePage.submitSearchButton.click();
     });
     await test.step("then the user is taken to results page", async () => {
-      await expect(resultsPage.destinationPicker).toBeVisible();
+      await expect(offerSelectionPage.destinationPicker).toBeVisible();
     });
   });
 });
